@@ -36,7 +36,7 @@ Website pembelajaran CSS interaktif yang lengkap dengan contoh visual dan penjel
 
 ## 📱 Live Demo
 
-[View Live Demo](https://yourusername.github.io/css-learning-hub)
+[View Live Demo](https://css-learning-ten.vercel.app/)
 
 ## 🎯 Perfect For
 
@@ -46,5 +46,14 @@ Website pembelajaran CSS interaktif yang lengkap dengan contoh visual dan penjel
 - Anyone building modern websites
 
 ## 📄 License
+feel free to use for learning!
 
-MIT License - feel free to use for learning!
+
+![screenshoot](images/image1.png)
+![screenshoot](images/image2.png)
+![screenshoot](images/image3.png)
+![screenshoot](images/image4.png)
+![screenshoot](images/image5.png)
+![screenshoot](images/image6.png)
+![screenshoot](images/image7.png)
+![screenshoot](images/image8.png)
