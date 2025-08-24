@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar CSS - Property Penting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header dengan position fixed -->
+    <header class="header-fixed">
+        <h1>Header Fixed - Selalu di Atas</h1>
+        <nav>
+            <a href="#flexbox">Flexbox</a>
+            <a href="#positioning">Positioning</a>
+            <a href="#buttons">Buttons</a>
+        </nav>
+    </header>
+
+    <!-- Spacer untuk header fixed -->
+    <div class="header-spacer"></div>
+
+    <!-- Section: Display Flex dan Flex Direction -->
+    <section id="flexbox" class="section">
+        <h2>1. Display Flex & Flex Direction</h2>
+        
+        <!-- Flex Direction Row (default) -->
+        <div class="demo-container">
+            <h3>Flex Direction: Row (Default)</h3>
+            <div class="flex-row">
+                <div class="flex-item">Item 1</div>
+                <div class="flex-item">Item 2</div>
+                <div class="flex-item">Item 3</div>
+            </div>
+        </div>
+
+        <!-- Flex Direction Column -->
+        <div class="demo-container">
+            <h3>Flex Direction: Column</h3>
+            <div class="flex-column">
+                <div class="flex-item">Item 1</div>
+                <div class="flex-item">Item 2</div>
+                <div class="flex-item">Item 3</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Justify Content -->
+    <section class="section">
+        <h2>2. Justify Content (Pengaturan Horizontal)</h2>
+        
+        <!-- Justify Content: Center -->
+        <div class="demo-container">
+            <h3>Justify Content: Center</h3>
+            <div class="justify-center">
+                <div class="flex-item">Item 1</div>
+                <div class="flex-item">Item 2</div>
+            </div>
+        </div>
+
+        <!-- Justify Content: Space Between -->
+        <div class="demo-container">
+            <h3>Justify Content: Space Between</h3>
+            <div class="justify-space-between">
+                <div class="flex-item">Item 1</div>
+                <div class="flex-item">Item 2</div>
+                <div class="flex-item">Item 3</div>
+            </div>
+        </div>
+
+        <!-- Justify Content: Space Around -->
+        <div class="demo-container">
+            <h3>Justify Content: Space Around</h3>
+            <div class="justify-space-around">
+                <div class="flex-item">Item 1</div>
+                <div class="flex-item">Item 2</div>
+                <div class="flex-item">Item 3</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Position -->
+    <section id="positioning" class="section">
+        <h2>3. Position Property</h2>
+        
+        <!-- Position Relative -->
+        <div class="demo-container">
+            <h3>Position: Relative</h3>
+            <div class="position-demo">
+                <div class="position-relative">
+                    Relative - Bergeser dari posisi asli
+                </div>
+            </div>
+        </div>
+
+        <!-- Position Absolute -->
+        <div class="demo-container">
+            <h3>Position: Absolute</h3>
+            <div class="position-demo relative-parent">
+                <div class="position-absolute">
+                    Absolute - Posisi berdasarkan parent
+                </div>
+            </div>
+        </div>
+
+        <!-- Position Sticky -->
+        <div class="demo-container">
+            <h3>Position: Sticky</h3>
+            <div class="sticky-container">
+                <div class="position-sticky">
+                    Sticky - Menempel saat scroll
+                </div>
+                <div class="content-tall">
+                    <p>Scroll ke bawah untuk melihat efek sticky...</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Beberapa Container dalam 1 Baris -->
+    <section class="section">
+        <h2>4. Multiple Container dalam 1 Baris</h2>
+        
+        <!-- Menggunakan Flexbox -->
+        <div class="demo-container">
+            <h3>Menggunakan Flexbox</h3>
+            <div class="multiple-containers-flex">
+                <div class="container-item">Container 1</div>
+                <div class="container-item">Container 2</div>
+                <div class="container-item">Container 3</div>
+            </div>
+        </div>
+
+        <!-- Menggunakan Grid -->
+        <div class="demo-container">
+            <h3>Menggunakan CSS Grid</h3>
+            <div class="multiple-containers-grid">
+                <div class="container-item">Container 1</div>
+                <div class="container-item">Container 2</div>
+                <div class="container-item">Container 3</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Buttons dan Effects -->
+    <section id="buttons" class="section">
+        <h2>5. Button Effects & Transitions</h2>
+        
+        <div class="demo-container">
+            <h3>Berbagai Efek Button</h3>
+            <div class="button-container">
+                <!-- Button dengan hover biasa -->
+                <button class="btn btn-hover">Hover Effect</button>
+                
+                <!-- Button dengan scale effect -->
+                <button class="btn btn-scale">Scale Effect</button>
+                
+                <!-- Button dengan slide effect -->
+                <button class="btn btn-slide">Slide Effect</button>
+                
+                <!-- Button dengan glow effect -->
+                <button class="btn btn-glow">Glow Effect</button>
+                
+                <!-- Button dengan gradient -->
+                <button class="btn btn-gradient">Gradient Button</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Search Box -->
+    <section class="section">
+        <h2>6. Search Box</h2>
+        
+        <div class="demo-container">
+            <h3>Kotak Pencarian dengan Efek</h3>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Cari sesuatu...">
+                <button class="search-btn">🔍</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Box Shadow & Gradient -->
+    <section class="section">
+        <h2>7. Box Shadow & Gradient</h2>
+        
+        <div class="demo-container">
+            <h3>Berbagai Box Shadow</h3>
+            <div class="shadow-examples">
+                <div class="shadow-basic">Basic Shadow</div>
+                <div class="shadow-elevated">Elevated Shadow</div>
+                <div class="shadow-inset">Inset Shadow</div>
+                <div class="shadow-colored">Colored Shadow</div>
+            </div>
+        </div>
+
+        <div class="demo-container">
+            <h3>Background Gradient</h3>
+            <div class="gradient-examples">
+                <div class="gradient-linear">Linear Gradient</div>
+                <div class="gradient-radial">Radial Gradient</div>
+                <div class="gradient-multiple">Multiple Colors</div>
+            </div>
+        </div>
+    </section>
+        <!-- Section: Text Properties dengan Kode -->
+    <section class="section">
+        <h2>17. Text Properties</h2>
+        
+        <div class="demo-container">
+            <h3>Text Shadow - Bayangan pada Text</h3>
+            <div class="text-shadow">Text dengan Shadow</div>
+            <div class="code-box">
+                <h4>CSS Code:</h4>
+                <pre><code>.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    /* x-offset y-offset blur-radius color */
+}</code></pre>
+                <p><strong>Penjelasan:</strong> text-shadow membuat bayangan pada text. Format: x y blur warna. x=geser kanan, y=geser bawah, blur=kekaburan bayangan.</p>
+            </div>
+        </div>
+
+        <div class="demo-container">
+            <h3>Text Stroke - Outline pada Text</h3>
+            <div class="text-stroke">Text dengan Outline</div>
+            <div class="code-box">
+                <h4>CSS Code:</h4>
+                <pre><code>.text-stroke {
+    color: transparent;
+    -webkit-text-stroke: 2px #e74c3c;
+    /* width color */
+}</code></pre>
+                <p><strong>Penjelasan:</strong> -webkit-text-stroke membuat outline pada text. color: transparent membuat text transparan, hanya outline yang terlihat.</p>
+            </div>
+        </div>
+
+        <div class="demo-container">
+            <h3>Gradient Text - Text dengan Warna Gradient</h3>
+            <div class="text-gradient">Gradient Text</div>
+            <div class="code-box">
+                <h4>CSS Code:</h4>
+                <pre><code>.text-gradient {
+    background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}</code></pre>
+                <p><strong>Penjelasan:</strong> Membuat text dengan warna gradient. background-clip: text memotong background sesuai bentuk text.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Transform Properties dengan Kode -->
+    <section class="section">
+        <h2>18. Transform Properties</h2>
+        
+        <div class="demo-container">
+            <h3>Transform Effects (Hover untuk melihat)</h3>
+            <div class="transform-examples">
+                <div class="transform-rotate">Rotate</div>
+                <div class="transform-scale">Scale</div>
+                <div class="transform-skew">Skew</div>
+                <div class="transform-translate">Translate</div>
+            </div>
+            <div class="code-box">
+                <h4>CSS Code:</h4>
+                <pre><code>/* Rotate - Memutar elemen */
+.transform-rotate:hover {
+    transform: rotate(45deg);
+}
+
+/* Scale - Memperbesar/kecilkan */
+.transform-scale:hover {
+    transform: scale(1.2); /* 120% dari ukuran asli */
+}
+
+/* Skew - Memiringkan elemen */
+.transform-skew:hover {
+    transform: skew(20deg, 10deg); /* x-axis y-axis */
+}
+
+/* Translate - Menggeser posisi */
+.transform-translate:hover {
+    transform: translate(20px, -20px); /* x y */
+}</code></pre>
+                <p><strong>Penjelasan:</strong> transform mengubah bentuk, ukuran, atau posisi elemen tanpa mempengaruhi layout. Bisa dikombinasikan: transform: rotate(45deg) scale(1.2);</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: CSS Animation dengan Kode -->
+    <section class="section">
+        <h2>19. CSS Animation dengan @keyframes</h2>
+        
+        <div class="demo-container">
+            <h3>Animasi Otomatis</h3>
+            <div class="animation-examples">
+                <div class="animate-bounce">Bounce</div>
+                <div class="animate-pulse">Pulse</div>
+                <div class="animate-spin">Spin</div>
+            </div>
+            <div class="code-box">
+                <h4>CSS Code:</h4>
+                <pre><code>/* Definisi animasi dengan @keyframes */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Menggunakan animasi */
+.animate-bounce {
+    animation: bounce 2s infinite;
+    /* nama durasi pengulangan */
+}</code></pre>
+                <p><strong>Penjelasan:</strong> @keyframes mendefinisikan animasi. 0% = awal, 100% = akhir. animation: nama durasi timing-function delay iteration-count direction fill-mode;</p>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 - Belajar CSS Property Penting</p>
+    </footer>
+</body>
+</html>

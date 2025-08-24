@@ -1,0 +1,1250 @@
+/* ===== RESET & BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Membuat width/height include padding & border */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Font family untuk seluruh halaman */
+    line-height: 1.6; /* Jarak antar baris text */
+    color: #333; /* Warna text default */
+    background-color: #f4f4f4; /* Background color halaman */
+}
+
+/* ===== HEADER FIXED ===== */
+.header-fixed {
+    position: fixed; /* Posisi tetap, tidak bergerak saat scroll */
+    top: 0; /* Jarak dari atas: 0 */
+    left: 0; /* Jarak dari kiri: 0 */
+    width: 100%; /* Lebar penuh layar */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Gradient background */
+    color: white; /* Warna text putih */
+    padding: 1rem 2rem; /* Padding atas-bawah: 1rem, kiri-kanan: 2rem */
+    z-index: 1000; /* Layer paling atas (angka tinggi = di depan) */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow: x-offset y-offset blur color */
+    
+    /* Flexbox untuk layout header */
+    display: flex; /* Mengaktifkan flexbox */
+    justify-content: space-between; /* Ruang di antara elemen (kiri-kanan) */
+    align-items: center; /* Rata tengah secara vertikal */
+}
+
+.header-fixed h1 {
+    font-size: 1.5rem; /* Ukuran font */
+    font-weight: bold; /* Ketebalan font */
+}
+
+.header-fixed nav {
+    display: flex; /* Flexbox untuk navigasi */
+    gap: 2rem; /* Jarak antar link navigasi */
+}
+
+.header-fixed nav a {
+    color: white; /* Warna link */
+    text-decoration: none; /* Hilangkan garis bawah */
+    padding: 0.5rem 1rem; /* Padding link */
+    border-radius: 5px; /* Sudut melengkung */
+    transition: background-color 0.3s ease; /* Animasi transisi 0.3 detik */
+}
+
+.header-fixed nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Background saat hover (transparan) */
+}
+
+/* Spacer untuk header fixed agar content tidak tertutup */
+.header-spacer {
+    height: 80px; /* Tinggi sesuai tinggi header */
+}
+
+/* ===== SECTION STYLING ===== */
+.section {
+    padding: 2rem; /* Padding dalam section */
+    margin-bottom: 2rem; /* Margin bawah */
+    background-color: white; /* Background putih */
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow halus */
+    max-width: 1200px; /* Lebar maksimal */
+    margin-left: auto; /* Margin kiri otomatis */
+    margin-right: auto; /* Margin kanan otomatis (untuk center) */
+}
+
+.section h2 {
+    color: #2c3e50; /* Warna heading */
+    margin-bottom: 1.5rem; /* Margin bawah */
+    font-size: 2rem; /* Ukuran font */
+    text-align: center; /* Text rata tengah */
+}
+
+.demo-container {
+    margin-bottom: 2rem; /* Margin bawah antar demo */
+    padding: 1rem; /* Padding dalam container */
+    border: 2px solid #e0e0e0; /* Border abu-abu */
+    border-radius: 8px; /* Sudut melengkung */
+    background-color: #fafafa; /* Background abu-abu muda */
+}
+
+.demo-container h3 {
+    color: #34495e; /* Warna sub-heading */
+    margin-bottom: 1rem; /* Margin bawah */
+    font-size: 1.2rem; /* Ukuran font */
+}
+
+/* ===== FLEXBOX EXAMPLES ===== */
+.flex-row {
+    display: flex; /* Aktifkan flexbox */
+    flex-direction: row; /* Arah horizontal (default) */
+    gap: 1rem; /* Jarak antar item */
+    padding: 1rem; /* Padding container */
+    background-color: #ecf0f1; /* Background abu-abu */
+    border-radius: 5px; /* Sudut melengkung */
+}
+
+.flex-column {
+    display: flex; /* Aktifkan flexbox */
+    flex-direction: column; /* Arah vertikal */
+    gap: 1rem; /* Jarak antar item */
+    padding: 1rem; /* Padding container */
+    background-color: #ecf0f1; /* Background abu-abu */
+    border-radius: 5px; /* Sudut melengkung */
+    height: 200px; /* Tinggi tetap untuk demo */
+}
+
+.flex-item {
+    background-color: #3498db; /* Background biru */
+    color: white; /* Text putih */
+    padding: 1rem; /* Padding dalam item */
+    border-radius: 5px; /* Sudut melengkung */
+    text-align: center; /* Text rata tengah */
+    min-width: 100px; /* Lebar minimal */
+    font-weight: bold; /* Text tebal */
+}
+
+/* ===== JUSTIFY CONTENT EXAMPLES ===== */
+.justify-center {
+    display: flex; /* Aktifkan flexbox */
+    justify-content: center; /* Rata tengah horizontal */
+    gap: 1rem; /* Jarak antar item */
+    padding: 1rem; /* Padding container */
+    background-color: #e8f5e8; /* Background hijau muda */
+    border-radius: 5px; /* Sudut melengkung */
+}
+
+.justify-space-between {
+    display: flex; /* Aktifkan flexbox */
+    justify-content: space-between; /* Ruang merata di antara item */
+    gap: 1rem; /* Jarak antar item */
+    padding: 1rem; /* Padding container */
+    background-color: #fff3cd; /* Background kuning muda */
+    border-radius: 5px; /* Sudut melengkung */
+}
+
+.justify-space-around {
+    display: flex; /* Aktifkan flexbox */
+    justify-content: space-around; /* Ruang merata di sekitar item */
+    gap: 1rem; /* Jarak antar item */
+    padding: 1rem; /* Padding container */
+    background-color: #f8d7da; /* Background merah muda */
+    border-radius: 5px; /* Sudut melengkung */
+}
+
+/* ===== POSITION EXAMPLES ===== */
+.position-demo {
+    height: 150px; /* Tinggi container demo */
+    background-color: #ecf0f1; /* Background abu-abu */
+    border-radius: 5px; /* Sudut melengkung */
+    position: relative; /* Untuk referensi position absolute */
+    padding: 1rem; /* Padding container */
+}
+
+.position-relative {
+    position: relative; /* Posisi relatif terhadap posisi asli */
+    top: 20px; /* Bergeser 20px dari atas */
+    left: 30px; /* Bergeser 30px dari kiri */
+    background-color: #e74c3c; /* Background merah */
+    color: white; /* Text putih */
+    padding: 0.5rem 1rem; /* Padding */
+    border-radius: 5px; /* Sudut melengkung */
+    display: inline-block; /* Display inline-block */
+}
+
+.relative-parent {
+    position: relative; /* Parent untuk absolute positioning */
+}
+
+.position-absolute {
+    position: absolute; /* Posisi absolut terhadap parent terdekat yang relative */
+    top: 10px; /* 10px dari atas parent */
+    right: 10px; /* 10px dari kanan parent */
+    background-color: #9b59b6; /* Background ungu */
+    color: white; /* Text putih */
+    padding: 0.5rem 1rem; /* Padding */
+    border-radius: 5px; /* Sudut melengkung */
+}
+
+.sticky-container {
+    height: 300px; /* Tinggi container */
+    overflow-y: auto; /* Scroll vertikal jika perlu */
+    border: 2px solid #bdc3c7; /* Border abu-abu */
+    border-radius: 5px; /* Sudut melengkung */
+}
+
+.position-sticky {
+    position: sticky; /* Posisi sticky (menempel saat scroll) */
+    top: 0; /* Menempel di atas saat scroll */
+    background-color: #f39c12; /* Background orange */
+    color: white; /* Text putih */
+    padding: 1rem; /* Padding */
+    text-align: center; /* Text rata tengah */
+    font-weight: bold; /* Text tebal */
+}
+
+.content-tall {
+    padding: 1rem; /* Padding content */
+    height: 400px; /* Tinggi untuk membuat scroll */
+}
+
+/* ===== MULTIPLE CONTAINERS ===== */
+.multiple-containers-flex {
+    display: flex; /* Aktifkan flexbox */
+    gap: 1rem; /* Jarak antar container */
+    padding: 1rem; /* Padding */
+    background-color: #ecf0f1; /* Background abu-abu */
+    border-radius: 5px; /* Sudut melengkung */
+}
+
+.multiple-containers-grid {
+    display: grid; /* Aktifkan CSS Grid */
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom dengan lebar sama */
+    gap: 1rem; /* Jarak antar grid item */
+    padding: 1rem; /* Padding */
+    background-color: #ecf0f1; /* Background abu-abu */
+    border-radius: 5px; /* Sudut melengkung */
+}
+
+.container-item {
+    background-color: #2ecc71; /* Background hijau */
+    color: white; /* Text putih */
+    padding: 2rem 1rem; /* Padding atas-bawah: 2rem, kiri-kanan: 1rem */
+    border-radius: 8px; /* Sudut melengkung */
+    text-align: center; /* Text rata tengah */
+    font-weight: bold; /* Text tebal */
+    min-height: 100px; /* Tinggi minimal */
+    display: flex; /* Flexbox untuk center content */
+    align-items: center; /* Rata tengah vertikal */
+    justify-content: center; /* Rata tengah horizontal */
+}
+
+/* ===== BUTTON STYLES & EFFECTS ===== */
+.button-container {
+    display: flex; /* Flexbox untuk layout button */
+    flex-wrap: wrap; /* Wrap ke baris baru jika perlu */
+    gap: 1rem; /* Jarak antar button */
+    padding: 1rem; /* Padding container */
+}
+
+.btn {
+    padding: 12px 24px; /* Padding button */
+    border: none; /* Hilangkan border default */
+    border-radius: 25px; /* Sudut melengkung */
+    font-size: 1rem; /* Ukuran font */
+    font-weight: bold; /* Text tebal */
+    cursor: pointer; /* Cursor pointer saat hover */
+    transition: all 0.3s ease; /* Transisi semua property 0.3 detik */
+    outline: none; /* Hilangkan outline saat focus */
+}
+
+/* Button hover biasa */
+.btn-hover {
+    background-color: #3498db; /* Background biru */
+    color: white; /* Text putih */
+}
+
+.btn-hover:hover {
+    background-color: #2980b9; /* Background lebih gelap saat hover */
+    transform: translateY(-2px); /* Bergerak ke atas 2px */
+}
+
+.btn-hover:active {
+    transform: translateY(0); /* Kembali ke posisi normal saat diklik */
+}
+
+/* Button dengan scale effect */
+.btn-scale {
+    background-color: #e74c3c; /* Background merah */
+    color: white; /* Text putih */
+}
+
+.btn-scale:hover {
+    transform: scale(1.1); /* Membesar 110% saat hover */
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4); /* Shadow merah */
+}
+
+/* Button dengan slide effect */
+.btn-slide {
+    background-color: #2ecc71; /* Background hijau */
+    color: white; /* Text putih */
+    position: relative; /* Untuk pseudo-element */
+    overflow: hidden; /* Sembunyikan overflow */
+}
+
+.btn-slide::before {
+    content: ''; /* Content kosong untuk pseudo-element */
+    position: absolute; /* Posisi absolut */
+    top: 0; /* Dari atas */
+    left: -100%; /* Mulai dari kiri (tersembunyi) */
+    width: 100%; /* Lebar penuh */
+    height: 100%; /* Tinggi penuh */
+    background-color: #27ae60; /* Background lebih gelap */
+    transition: left 0.3s ease; /* Transisi pergerakan */
+    z-index: -1; /* Di belakang text */
+}
+
+.btn-slide:hover::before {
+    left: 0; /* Slide masuk dari kiri */
+}
+
+/* Button dengan glow effect */
+.btn-glow {
+    background-color: #9b59b6; /* Background ungu */
+    color: white; /* Text putih */
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 20px rgba(155, 89, 182, 0.6); /* Glow effect */
+    transform: translateY(-2px); /* Bergerak ke atas */
+}
+
+/* Button dengan gradient */
+.btn-gradient {
+    background: linear-gradient(45deg, #ff6b6b, #feca57); /* Gradient merah-kuning */
+    color: white; /* Text putih */
+    border: none; /* Hilangkan border */
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(45deg, #feca57, #ff6b6b); /* Gradient terbalik */
+    transform: scale(1.05); /* Sedikit membesar */
+}
+
+/* ===== SEARCH BOX ===== */
+.search-container {
+    display: flex; /* Flexbox untuk layout search */
+    max-width: 400px; /* Lebar maksimal */
+    margin: 0 auto; /* Center horizontal */
+    background-color: white; /* Background putih */
+    border-radius: 25px; /* Sudut melengkung */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow halus */
+    overflow: hidden; /* Sembunyikan overflow */
+}
+
+.search-input {
+    flex: 1; /* Ambil ruang yang tersisa */
+    padding: 12px 20px; /* Padding input */
+    border: none; /* Hilangkan border */
+    outline: none; /* Hilangkan outline */
+    font-size: 1rem; /* Ukuran font */
+    background-color: transparent; /* Background transparan */
+}
+
+.search-input:focus {
+    background-color: #f8f9fa; /* Background saat focus */
+}
+
+.search-btn {
+    padding: 12px 20px; /* Padding button */
+    border: none; /* Hilangkan border */
+    background-color: #3498db; /* Background biru */
+    color: white; /* Text putih */
+    cursor: pointer; /* Cursor pointer */
+    font-size: 1rem; /* Ukuran font */
+    transition: background-color 0.3s ease; /* Transisi background */
+}
+
+.search-btn:hover {
+    background-color: #2980b9; /* Background lebih gelap saat hover */
+}
+
+/* ===== BOX SHADOW EXAMPLES ===== */
+.shadow-examples {
+    display: grid; /* CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 2rem; /* Jarak antar item */
+    padding: 1rem; /* Padding container */
+}
+
+.shadow-examples > div {
+    padding: 2rem; /* Padding item */
+    text-align: center; /* Text rata tengah */
+    border-radius: 10px; /* Sudut melengkung */
+    background-color: white; /* Background putih */
+    font-weight: bold; /* Text tebal */
+}
+
+.shadow-basic {
+    /* Box shadow: x-offset y-offset blur spread color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow halus */
+}
+
+.shadow-elevated {
+    /* Shadow lebih tinggi untuk efek elevated */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Shadow lebih dalam */
+}
+
+.shadow-inset {
+    /* Inset shadow (shadow ke dalam) */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow ke dalam */
+}
+
+.shadow-colored {
+    /* Shadow berwarna */
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3); /* Shadow biru */
+}
+
+/* ===== GRADIENT EXAMPLES ===== */
+.gradient-examples {
+    display: grid; /* CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 2rem; /* Jarak antar item */
+    padding: 1rem; /* Padding container */
+}
+
+.gradient-examples > div {
+    padding: 2rem; /* Padding item */
+    text-align: center; /* Text rata tengah */
+    border-radius: 10px; /* Sudut melengkung */
+    color: white; /* Text putih */
+    font-weight: bold; /* Text tebal */
+}
+
+.gradient-linear {
+    /* Linear gradient: arah, warna-awal posisi, warna-akhir posisi */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-radial {
+    /* Radial gradient: bentuk, warna-tengah, warna-luar */
+    background: radial-gradient(circle, #ff6b6b 0%, #ee5a24 100%);
+}
+
+.gradient-multiple {
+    /* Multiple color gradient */
+    background: linear-gradient(45deg, #ff6b6b 0%, #feca57 50%, #48dbfb 100%);
+}
+
+/* ===== PROPERTY PENTING LAINNYA ===== */
+
+/* 8. OVERFLOW - Mengatur content yang melebihi container */
+.overflow-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.overflow-hidden {
+    width: 200px; /* Lebar terbatas */
+    height: 100px; /* Tinggi terbatas */
+    background-color: #ecf0f1;
+    border: 2px solid #bdc3c7;
+    padding: 1rem;
+    overflow: hidden; /* Sembunyikan content yang keluar */
+}
+
+.overflow-scroll {
+    width: 200px;
+    height: 100px;
+    background-color: #ecf0f1;
+    border: 2px solid #bdc3c7;
+    padding: 1rem;
+    overflow: scroll; /* Selalu tampilkan scrollbar */
+}
+
+.overflow-auto {
+    width: 200px;
+    height: 100px;
+    background-color: #ecf0f1;
+    border: 2px solid #bdc3c7;
+    padding: 1rem;
+    overflow: auto; /* Scrollbar muncul jika perlu */
+}
+
+/* 9. OBJECT-FIT - Mengatur gambar dalam container */
+.image-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.image-container {
+    width: 200px;
+    height: 150px;
+    border: 2px solid #bdc3c7;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Gambar menutupi container, mungkin terpotong */
+}
+
+.img-contain {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Gambar muat dalam container, mungkin ada ruang kosong */
+    background-color: #f8f9fa;
+}
+
+/* 10. CLIP-PATH - Memotong elemen dengan bentuk custom */
+.clip-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.clip-circle {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    clip-path: circle(50%); /* Bentuk lingkaran */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.clip-triangle {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Bentuk segitiga */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.clip-hexagon {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    clip-path: polygon(30% 0%, 70% 0%, 100% 50%, 70% 100%, 30% 100%, 0% 50%); /* Bentuk hexagon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* 11. FILTER - Efek visual pada elemen */
+.filter-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.filter-item {
+    width: 200px;
+    height: 150px;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    transition: filter 0.3s ease;
+}
+
+.filter-blur:hover {
+    filter: blur(2px); /* Efek blur */
+}
+
+.filter-brightness:hover {
+    filter: brightness(1.5); /* Lebih terang */
+}
+
+.filter-contrast:hover {
+    filter: contrast(1.5); /* Kontras tinggi */
+}
+
+.filter-grayscale:hover {
+    filter: grayscale(100%); /* Hitam putih */
+}
+
+.filter-sepia:hover {
+    filter: sepia(100%); /* Efek sepia */
+}
+
+/* 12. BACKDROP-FILTER - Filter untuk background */
+.backdrop-example {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb);
+    border-radius: 15px;
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.backdrop-content {
+    background: rgba(255, 255, 255, 0.2); /* Background semi-transparan */
+    backdrop-filter: blur(10px); /* Blur background di belakang */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 2rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* 13. ASPECT-RATIO - Mengatur rasio lebar:tinggi */
+.aspect-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.aspect-16-9 {
+    aspect-ratio: 16/9; /* Rasio 16:9 (video) */
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.aspect-1-1 {
+    aspect-ratio: 1/1; /* Rasio 1:1 (kotak) */
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* 14. CUSTOM PROPERTIES (CSS Variables) */
+:root {
+    /* Definisi variabel global */
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --warning-color: #f39c12;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+.variable-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.var-primary {
+    background-color: var(--primary-color); /* Menggunakan variabel */
+    color: white;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: bold;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.var-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 15. SCROLL BEHAVIOR & SCROLL SNAP */
+.scroll-container {
+    height: 300px;
+    overflow-y: auto;
+    scroll-behavior: smooth; /* Scroll halus */
+    scroll-snap-type: y mandatory; /* Snap vertikal */
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+}
+
+.scroll-item {
+    height: 280px;
+    scroll-snap-align: start; /* Snap ke awal item */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+.scroll-item:nth-child(1) { background: linear-gradient(45deg, #ff6b6b, #feca57); }
+.scroll-item:nth-child(2) { background: linear-gradient(45deg, #667eea, #764ba2); }
+.scroll-item:nth-child(3) { background: linear-gradient(45deg, #2ecc71, #27ae60); }
+
+/* 16. WILL-CHANGE - Optimasi performa animasi */
+.performance-optimized {
+    background: linear-gradient(45deg, #9b59b6, #8e44ad);
+    color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    will-change: transform; /* Optimasi untuk transform */
+}
+
+.performance-optimized:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: #2c3e50; /* Background gelap */
+    color: white; /* Text putih */
+    text-align: center; /* Text rata tengah */
+    padding: 2rem; /* Padding */
+    margin-top: 2rem; /* Margin atas */
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    /* Styles untuk layar kecil (tablet/mobile) */
+    
+    .header-fixed {
+        flex-direction: column; /* Header jadi vertikal */
+        text-align: center; /* Text rata tengah */
+        padding: 1rem; /* Padding lebih kecil */
+    }
+    
+    .header-fixed nav {
+        margin-top: 1rem; /* Margin atas untuk nav */
+        justify-content: center; /* Center nav items */
+    }
+    
+    .header-spacer {
+        height: 120px; /* Tinggi lebih untuk header vertikal */
+    }
+    
+    .section {
+        padding: 1rem; /* Padding lebih kecil */
+        margin: 1rem; /* Margin lebih kecil */
+    }
+    
+    .multiple-containers-flex,
+    .multiple-containers-grid {
+        flex-direction: column; /* Jadi vertikal di mobile */
+        grid-template-columns: 1fr; /* 1 kolom di mobile */
+    }
+    
+    .button-container {
+        flex-direction: column; /* Button jadi vertikal */
+        align-items: center; /* Center button */
+    }
+    
+    .btn {
+        width: 200px; /* Lebar tetap untuk button */
+    }
+}
+
+/* ===== ADDITIONAL HOVER EFFECTS ===== */
+.demo-container:hover {
+    transform: translateY(-2px); /* Bergerak ke atas saat hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Shadow lebih dalam */
+    transition: all 0.3s ease; /* Transisi halus */
+}
+
+/* Smooth scrolling untuk seluruh halaman */
+html {
+    scroll-behavior: smooth; /* Scroll halus saat klik anchor link */
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px; /* Lebar scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background track scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Warna thumb scrollbar */
+    border-radius: 4px; /* Sudut melengkung */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Warna lebih gelap saat hover */
+} /* Bergerak ke atas 2px */
+
+.btn-hover:active {
+    transform: translateY(0); /* Kembali ke posisi normal saat diklik */
+}
+
+/* Button dengan scale effect */
+.btn-scale {
+    background-color: #e74c3c; /* Background merah */
+    color: white; /* Text putih */
+}
+
+.btn-scale:hover {
+    transform: scale(1.1); /* Membesar 110% saat hover */
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4); /* Shadow merah */
+}
+
+/* Button dengan glow effect */
+.btn-glow {
+    background-color: #9b59b6; /* Background ungu */
+    color: white; /* Text putih */
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 20px rgba(155, 89, 182, 0.6); /* Glow effect */
+    transform: translateY(-2px); /* Bergerak ke atas */
+}
+
+/* Button dengan gradient */
+.btn-gradient {
+    background: linear-gradient(45deg, #ff6b6b, #feca57); /* Gradient merah-kuning */
+    color: white; /* Text putih */
+    border: none; /* Hilangkan border */
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(45deg, #feca57, #ff6b6b); /* Gradient terbalik */
+    transform: scale(1.05); /* Sedikit membesar */
+}
+
+/* ===== SEARCH BOX ===== */
+.search-container {
+    display: flex; /* Flexbox untuk layout search */
+    max-width: 400px; /* Lebar maksimal */
+    margin: 0 auto; /* Center horizontal */
+    background-color: white; /* Background putih */
+    border-radius: 25px; /* Sudut melengkung */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow halus */
+    overflow: hidden; /* Sembunyikan overflow */
+}
+
+.search-input {
+    flex: 1; /* Ambil ruang yang tersisa */
+    padding: 12px 20px; /* Padding input */
+    border: none; /* Hilangkan border */
+    outline: none; /* Hilangkan outline */
+    font-size: 1rem; /* Ukuran font */
+    background-color: transparent; /* Background transparan */
+}
+
+.search-input:focus {
+    background-color: #f8f9fa; /* Background saat focus */
+}
+
+.search-btn {
+    padding: 12px 20px; /* Padding button */
+    border: none; /* Hilangkan border */
+    background-color: #3498db; /* Background biru */
+    color: white; /* Text putih */
+    cursor: pointer; /* Cursor pointer */
+    font-size: 1rem; /* Ukuran font */
+    transition: background-color 0.3s ease; /* Transisi background */
+}
+
+.search-btn:hover {
+    background-color: #2980b9; /* Background lebih gelap saat hover */
+}
+
+/* ===== BOX SHADOW EXAMPLES ===== */
+.shadow-examples {
+    display: grid; /* CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 2rem; /* Jarak antar item */
+    padding: 1rem; /* Padding container */
+}
+
+.shadow-examples > div {
+    padding: 2rem; /* Padding item */
+    text-align: center; /* Text rata tengah */
+    border-radius: 10px; /* Sudut melengkung */
+    background-color: white; /* Background putih */
+    font-weight: bold; /* Text tebal */
+}
+
+.shadow-basic {
+    /* Box shadow: x-offset y-offset blur spread color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow halus */
+}
+
+.shadow-elevated {
+    /* Shadow lebih tinggi untuk efek elevated */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Shadow lebih dalam */
+}
+
+.shadow-inset {
+    /* Inset shadow (shadow ke dalam) */
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow ke dalam */
+}
+
+.shadow-colored {
+    /* Shadow berwarna */
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3); /* Shadow biru */
+}
+
+/* ===== GRADIENT EXAMPLES ===== */
+.gradient-examples {
+    display: grid; /* CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 2rem; /* Jarak antar item */
+    padding: 1rem; /* Padding container */
+}
+
+.gradient-examples > div {
+    padding: 2rem; /* Padding item */
+    text-align: center; /* Text rata tengah */
+    border-radius: 10px; /* Sudut melengkung */
+    color: white; /* Text putih */
+    font-weight: bold; /* Text tebal */
+}
+
+.gradient-linear {
+    /* Linear gradient: arah, warna-awal posisi, warna-akhir posisi */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.gradient-radial {
+    /* Radial gradient: bentuk, warna-tengah, warna-luar */
+    background: radial-gradient(circle, #ff6b6b 0%, #ee5a24 100%);
+}
+
+.gradient-multiple {
+    /* Multiple color gradient */
+    background: linear-gradient(45deg, #ff6b6b 0%, #feca57 50%, #48dbfb 100%);
+}
+
+/* ===== TEXT PROPERTIES ===== */
+.text-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.text-shadow {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* x y blur color */
+    text-align: center;
+    padding: 1rem;
+}
+
+.text-stroke {
+    font-size: 2rem;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 2px #e74c3c; /* width color */
+    text-align: center;
+    padding: 1rem;
+}
+
+.text-gradient {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+    padding: 1rem;
+}
+
+.text-uppercase {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase; /* Huruf besar semua */
+    letter-spacing: 2px; /* Jarak antar huruf */
+    color: #9b59b6;
+    text-align: center;
+    padding: 1rem;
+}
+
+.text-spacing {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 5px; /* Jarak antar huruf */
+    word-spacing: 10px; /* Jarak antar kata */
+    color: #2ecc71;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* ===== TRANSFORM PROPERTIES ===== */
+.transform-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.transform-examples > div {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.transform-rotate:hover {
+    transform: rotate(45deg); /* Putar 45 derajat */
+}
+
+.transform-scale:hover {
+    transform: scale(1.2); /* Perbesar 120% */
+}
+
+.transform-skew:hover {
+    transform: skew(20deg, 10deg); /* Miring x y */
+}
+
+.transform-translate:hover {
+    transform: translate(20px, -20px); /* Geser x y */
+}
+
+.transform-3d:hover {
+    transform: rotateX(45deg) rotateY(45deg); /* Rotasi 3D */
+    transform-style: preserve-3d;
+}
+
+/* ===== CSS ANIMATIONS ===== */
+.animation-examples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.animation-examples > div {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, #ff6b6b, #feca57);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+/* Keyframes untuk animasi bounce */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-bounce {
+    animation: bounce 2s infinite; /* nama durasi repeat */
+}
+
+/* Keyframes untuk animasi pulse */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 1.5s infinite;
+}
+
+/* Keyframes untuk animasi spin */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin {
+    animation: spin 2s linear infinite; /* linear = kecepatan konstan */
+}
+
+/* Keyframes untuk animasi slide */
+@keyframes slide {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
+
+.animate-slide {
+    animation: slide 3s infinite;
+}
+
+/* ===== CODE BOX STYLING ===== */
+.code-box {
+    background-color: #f8f9fa; /* Background abu-abu muda */
+    border: 1px solid #e9ecef; /* Border abu-abu */
+    border-radius: 8px; /* Sudut melengkung */
+    padding: 1.5rem; /* Padding dalam */
+    margin-top: 1rem; /* Margin atas */
+}
+
+.code-box h4 {
+    color: #495057; /* Warna heading */
+    margin-bottom: 0.5rem; /* Margin bawah */
+    font-size: 1.1rem; /* Ukuran font */
+}
+
+.code-box pre {
+    background-color: #2d3748; /* Background gelap untuk kode */
+    color: #e2e8f0; /* Text terang */
+    padding: 1rem; /* Padding kode */
+    border-radius: 6px; /* Sudut melengkung */
+    overflow-x: auto; /* Scroll horizontal jika perlu */
+    font-family: 'Courier New', monospace; /* Font monospace */
+    font-size: 0.9rem; /* Ukuran font kode */
+    line-height: 1.4; /* Jarak antar baris */
+    margin: 0.5rem 0; /* Margin atas bawah */
+}
+
+.code-box code {
+    color: #e2e8f0; /* Warna kode */
+    font-family: 'Courier New', monospace; /* Font monospace */
+}
+
+.code-box p {
+    color: #6c757d; /* Warna penjelasan */
+    font-size: 0.95rem; /* Ukuran font penjelasan */
+    line-height: 1.5; /* Jarak antar baris */
+    margin-top: 1rem; /* Margin atas */
+    margin-bottom: 0; /* Hilangkan margin bawah */
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: #2c3e50; /* Background gelap */
+    color: white; /* Text putih */
+    text-align: center; /* Text rata tengah */
+    padding: 2rem; /* Padding */
+    margin-top: 2rem; /* Margin atas */
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    /* Styles untuk layar kecil (tablet/mobile) */
+    
+    .header-fixed {
+        flex-direction: column; /* Header jadi vertikal */
+        text-align: center; /* Text rata tengah */
+        padding: 1rem; /* Padding lebih kecil */
+    }
+    
+    .header-fixed nav {
+        margin-top: 1rem; /* Margin atas untuk nav */
+        justify-content: center; /* Center nav items */
+    }
+    
+    .header-spacer {
+        height: 120px; /* Tinggi lebih untuk header vertikal */
+    }
+    
+    .section {
+        padding: 1rem; /* Padding lebih kecil */
+        margin: 1rem; /* Margin lebih kecil */
+    }
+    
+    .multiple-containers-flex,
+    .multiple-containers-grid {
+        flex-direction: column; /* Jadi vertikal di mobile */
+        grid-template-columns: 1fr; /* 1 kolom di mobile */
+    }
+    
+    .button-container {
+        flex-direction: column; /* Button jadi vertikal */
+        align-items: center; /* Center button */
+    }
+    
+    .btn {
+        width: 200px; /* Lebar tetap untuk button */
+    }
+}
+
+/* ===== ADDITIONAL HOVER EFFECTS ===== */
+.demo-container:hover {
+    transform: translateY(-2px); /* Bergerak ke atas saat hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Shadow lebih dalam */
+    transition: all 0.3s ease; /* Transisi halus */
+}
+
+/* Smooth scrolling untuk seluruh halaman */
+html {
+    scroll-behavior: smooth; /* Scroll halus saat klik anchor link */
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px; /* Lebar scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background track scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Warna thumb scrollbar */
+    border-radius: 4px; /* Sudut melengkung */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Warna lebih gelap saat hover */
+}
